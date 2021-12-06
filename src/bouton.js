@@ -1,10 +1,14 @@
-import React from "react"
-
+import React from "react";
+import './bouton.css';
 
 export default class Bouton extends React.Component{
     render(){
         return(
-            <div>{this.props.text}</div>
+            <input 
+                type="button" 
+                value={this.props.text} 
+                onClick={ () => this.props.handleChange(this)}
+            /> 
         )
     }
 }
